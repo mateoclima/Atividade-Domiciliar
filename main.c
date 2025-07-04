@@ -23,9 +23,9 @@ void consultar_por_usuario(ListaEmprestimos* lista, const char* codigo_usuario) 
     NoEmprestimo* atual = lista->inicio;
 
     while (atual != NULL) {
-        // O campo 'cod_usuario' foi definido na struct Emprestimo
+        // O campo 'codusuario' foi definido na struct Emprestimo
         // E a função strcmp foi declarada em <string.h>, incluída em emprestimo.c
-        if (strcmp(atual->dados.cod_usuario, codigo_usuario) == 0) {
+        if (strcmp(atual->dados.codusuario, codigo_usuario) == 0) {
             printf("  - Livro (ISBN: %s), Devolucao: %d\n",
                    atual->dados.isbn_livro, atual->dados.dtDevolucao);
             encontrados++;
